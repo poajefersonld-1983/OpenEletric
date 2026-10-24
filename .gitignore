@@ -1,0 +1,17 @@
+# Build output and user data
+app/verificacao/
+app/*.exe
+*.deb
+*.tar.xz
+*.msi
+*.log
+*.user
+*.suo
+*.pdb
+release/
+artifacts/
+work/
+__pycache__/
+*.pyc
+.env
+.env.*

@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=OpenEletric
+GenericName=Projetos elétricos
+Comment=Quadros, circuitos e estudos elétricos
+Exec=openeletric %f
+Icon=openeletric
+Terminal=false
+Categories=Science;Engineering;
+MimeType=application/x-openeletric-project;
+StartupNotify=true
+StartupWMClass=circuitostudio.exe

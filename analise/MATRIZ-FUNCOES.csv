@@ -1,0 +1,41 @@
+﻿id,grupo,funcao,aceite,status_entrega
+F01,Projeto,Dados de obra cliente e descrição,Criar editar salvar reabrir todos os campos sem perda Unicode,verificado_no_escopo
+F02,Projeto,Gerenciar quadros e circuitos,Adicionar renomear remover e preservar referências elétricas entre quadros,verificado_no_escopo
+F03,Projeto,Criar abrir salvar e recuperar projeto,Roundtrip completo autosave recuperação após falha e backup restaurável,verificado_no_escopo
+F04,Projeto,Assistente de alimentação e layout,Concluir assistente LV MV gerador e produzir topologia válida persistente,verificado_no_escopo
+F05,CAD,Editor unifilar com conexões elétricas,Inserir mover conectar apagar símbolos e recalcular rede após edição,verificado_no_escopo
+F06,CAD,Configuração de invólucros e vista frontal,Selecionar invólucro distribuir dispositivos frontal e detectar ocupação inválida,verificado_no_escopo
+F07,CAD,Etiquetas símbolos e padrões de desenho,Alterar símbolo e etiqueta persistir e exportar geometria correspondente,verificado_no_escopo
+F08,CAD,Intercâmbio de desenho AMB e DXF,Validar formato alcance e roundtrip com amostras independentes sem perda declarada,verificado_no_escopo
+F09,Fontes,Rede LV e transformador MV/LV,Calcular impedância de fonte de dados nominais e confirmar casos analíticos,verificado_no_escopo
+F10,Fontes,Geradores LV e MV,Cadastrar gerador calcular contribuição conforme modelo documentado e validar exemplo,verificado_no_escopo
+F11,Fontes,UPS e impedância definida pelo usuário,Representar fonte UPS e R/X por fase neutro PE sem confundir modelos,verificado_no_escopo
+F12,Cargas,Carga ativa reativa demanda e corrente,Calcular P Q S I por tipo de carga unidades e agregação por fase com casos referência,verificado_no_escopo
+F13,Cargas,Motores rendimento e partida,Converter potência de eixo por rendimento e avaliar partida e corrente com dados verificáveis,verificado_no_escopo
+F14,Cargas,Inversor e motor associado,Distinguir corrente de entrada do drive e motor e persistir seus dados nominais,verificado_no_escopo
+F15,Cargas,Banco de capacitores e compensação,Calcular kvar para FP alvo e refletir Q e corrente a montante em caso referência,verificado_no_escopo
+F16,Cabos,Dimensionamento por capacidade de condução,Selecionar seção por método documentado Iz e fatores com tabela rastreável,verificado_no_escopo
+F17,Cabos,Queda de tensão e limite por circuito,Calcular queda resistiva e reativa mono trifásica e sinalizar limite com casos referência,verificado_no_escopo
+F18,Cabos,Neutro PE e otimização,Dimensionar neutro PE com hipóteses explícitas e verificar limites normativos escolhidos,verificado_no_escopo
+F19,Cabos,Temperatura ambiente e agrupamento,Aplicar fatores disponíveis de fonte rastreável e explicar seleção de seção,verificado_no_escopo
+F20,Cabos,Barramentos e busways,Selecionar barramento verificar corrente e suportabilidade com dados de catálogo,verificado_no_escopo
+F21,Rede,Balanceamento automático de fases,Distribuir cargas monofásicas preservar restrições e comparar desequilíbrio antes depois,verificado_no_escopo
+F22,Rede,Cálculo em rede e valores a jusante,Propagar cargas e tensões entre três níveis de quadros respeitando demanda e fases,verificado_no_escopo
+F23,Curto,Curto máximo mínimo trifásico e bifásico,Calcular Ik máximos mínimos com contribuição de fontes e comparar benchmarks independentes,verificado_no_escopo
+F24,Curto,Curto fase neutro e fase terra,Calcular laço fase neutro PE por esquema documentado e verificar exemplo independente,verificado_no_escopo
+F25,Curto,Pico fator de potência e tempo do curto,Calcular ou importar pico e dependência temporal com método declarado e validar casos,verificado_no_escopo
+F26,Terra,Esquemas TT TN IT e resistência Ra,Persistir esquema condutores e Ra e impedir combinações fisicamente inválidas,verificado_no_escopo
+F27,Terra,Contato e tempo de desligamento,Verificar tensão de contato e tempo máximo com regra por circuito e justificativa rastreável,verificado_no_escopo
+F28,Proteção,Seleção de disjuntores e capacidade de interrupção,Filtrar polos tensão In Icu Icn e justificar aprovação rejeição contra Ib Iz Ik,verificado_no_escopo
+F29,Proteção,Curvas ajustes e energia passante,Representar curvas t-I I2t e Ip com tolerâncias dados de origem e ajustes persistentes,verificado_no_escopo
+F30,Proteção,Sobrecarga e suportabilidade térmica do cabo,Verificar Ib In Iz e energia admissível com casos aprovados reprovados e fronteira,verificado_no_escopo
+F31,Proteção,Fusíveis e seccionadores,Selecionar família polos tensão corrente capacidade e verificar adequação à rede,verificado_no_escopo
+F32,Proteção,Diferenciais relés e acessórios,Selecionar In IΔn polos e verificar proteção aplicável sem presumir seletividade,verificado_no_escopo
+F33,Proteção,Contator partida manual e relé térmico,Selecionar conjunto por corrente serviço classe e coordenação documentada,verificado_no_escopo
+F34,Proteção,Seletividade e ligações automáticas,Avaliar par montante jusante com dados certificados ou marcar indeterminado sem extrapolar,verificado_no_escopo
+F35,Proteção,Backup cascading de disjuntores,Usar tabela de par tensão e limite de curto rastreável e rejeitar par sem evidência,verificado_no_escopo
+F36,Catálogo,Catálogo pesquisável e seleção explicada,Filtrar fabricante família modelo listar ficha fonte versão e razões de seleção,verificado_no_escopo
+F37,Catálogo,Arquivos personalizados e importação XLS,Exportar template importar com validação de unidades erros e duplicatas sem corromper catálogo,verificado_no_escopo
+F38,Saídas,Relatório selecionável prévia impressão PDF RTF,Selecionar objetos visualizar imprimir e gerar PDF e RTF com valores e avisos corretos,verificado_no_escopo
+F39,Saídas,Resultados tabulares e desenho exportado,Conferir totais unidades identificação e desenho contra dados salvos em exportações,verificado_no_escopo
+F40,Qualidade,Normas métodos configurações e avisos,Registrar edição método hipóteses e avisos no projeto e relatório com resultados reproduzíveis,verificado_no_escopo

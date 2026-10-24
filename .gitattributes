@@ -1,0 +1,13 @@
+* text=auto
+*.cs text eol=lf
+*.ps1 text eol=crlf
+*.md text eol=lf
+*.csv text eol=lf
+*.circuito text eol=lf
+*.amb binary
+*.xls binary
+*.xlsx binary
+*.dll binary
+*.ttf binary
+*.nupkg binary
+app/third_party/** -text

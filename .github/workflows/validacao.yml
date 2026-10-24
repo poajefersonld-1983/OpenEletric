@@ -1,0 +1,43 @@
+name: Validacao Windows
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  windows:
+    runs-on: windows-latest
+    timeout-minutes: 25
+    steps:
+      - name: Baixar codigo
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Preparar fontes dos testes Unicode
+        shell: powershell
+        run: .\scripts\Instalar-Fontes-Teste.ps1
+      - name: Compilar Windows x64
+        shell: powershell
+        run: |
+          New-Item -ItemType Directory artifacts -Force | Out-Null
+          .\app\compilar.ps1 -Platform x64 -OutputPath "$pwd\artifacts\OpenEletric.exe"
+      - name: Verificar sintaxe do instalador PowerShell
+        shell: powershell
+        run: |
+          $tokens = $null
+          $errors = $null
+          [System.Management.Automation.Language.Parser]::ParseFile("$pwd\scripts\Instalar-OpenEletric.ps1", [ref]$tokens, [ref]$errors) | Out-Null
+          if ($errors.Count) { $errors | Format-List; throw 'Erro de sintaxe no instalador' }
+      - name: Executar testes
+        shell: powershell
+        run: .\app\testar.ps1
+      - name: Guardar executavel e resultados
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: OpenEletric-Windows-build
+          path: |
+            artifacts/OpenEletric.exe
+            app/verificacao/resultados*.txt
+            app/verificacao/referencias-pdf/*.pdf
+          if-no-files-found: warn

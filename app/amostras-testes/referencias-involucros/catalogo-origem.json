@@ -1,0 +1,25 @@
+{
+  "url": "https://library.e.abb.com/public/0f1dd4cc71ec47f098a2b9b50f2cf5af/1TXH000327C0301_Coffrets%20Mistral.pdf",
+  "document": "ABB1TXH000327C0301",
+  "revision": "09/2014",
+  "pdf_sha256": "753034781e5def7bbd2e1e5a9d8fd8f423254f603596fc74e1b2cf55653887d6",
+  "printed_page": 14,
+  "pdf_page": 14,
+  "module_pitch_mm": 17.5,
+  "row_pitch_mm": 125,
+  "reference_slots": {
+    "1SPE007717F0410": [
+      1,
+      12
+    ],
+    "1SPE007717F0510": [
+      2,
+      12
+    ],
+    "1SPE007717F0610": [
+      3,
+      12
+    ]
+  },
+  "scope": "front DIN occupancy; no inference of usable dimensions from external dimensions; no 3D/thermal/IP approval"
+}

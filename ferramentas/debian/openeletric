@@ -1,0 +1,53 @@
+#!/bin/sh
+set -eu
+umask 077
+install_dir=${CIRCUITO_INSTALL_DIR:-/opt/openeletric}
+wine64=/usr/lib/wine/wine64
+case "${1:-}" in
+ --version) cat "$install_dir/VERSION"; exit 0;;
+ --help) printf '%s\n' 'Uso: openeletric [arquivo.circuito]' 'Abra também pelo menu de aplicativos.'; exit 0;;
+esac
+error() {
+ printf '%s\n' "$1" >&2
+ if command -v zenity >/dev/null 2>&1 && [ -n "${DISPLAY:-}${WAYLAND_DISPLAY:-}" ]; then zenity --error --title='OpenEletric' --text="$1" 2>/dev/null || :; fi
+ exit 1
+}
+[ "$(id -u)" -ne 0 ] || error 'Abra o OpenEletric com seu usuário comum, sem sudo.'
+[ "$#" -le 1 ] || error 'Abra um projeto por vez.'
+[ -x "$wine64" ] || error 'Wine de 64 bits não encontrado. Reinstale o pacote usando o gerenciador de aplicativos.'
+[ -f "$install_dir/OpenEletric.exe" ] || error 'Instalação incompleta do OpenEletric.'
+state=${XDG_STATE_HOME:-$HOME/.local/state}/openeletric
+data=${XDG_DATA_HOME:-$HOME/.local/share}/openeletric
+mkdir -p "$state" "$data"
+export CIRCUITO_DESKTOP=debian
+export WINEPREFIX="$data/wine64" WINEARCH=win64 WINEDEBUG=-all WINEDLLOVERRIDES='winemenubuilder.exe=d'
+log="$state/ultima-execucao.log"
+[ -n "${DISPLAY:-}${WAYLAND_DISPLAY:-}" ] || error 'Abra o aplicativo em uma sessão gráfica.'
+# Initialization is per user, serialized and offline; package installation never runs Wine.
+(
+ flock -x 9
+ if [ ! -f "$WINEPREFIX/system.reg" ]; then
+  WINEDLLOVERRIDES='mscoree=d;winemenubuilder.exe=d' "$wine64" wineboot.exe --init >>"$log" 2>&1 || exit 1
+ fi
+ runtime_win=$("$wine64" winepath.exe -w "$install_dir/runtime/mono" 2>>"$log") || exit 1
+ "$wine64" reg.exe add 'HKCU\Software\Wine\Mono' /v RuntimePath /t REG_SZ /d "$runtime_win" /f >>"$log" 2>&1 || exit 1
+) 9>"$data/inicializacao.lock" || error "Não foi possível preparar o aplicativo. Registro: $log"
+documents=$(xdg-user-dir DOCUMENTS 2>/dev/null || printf '%s' "$HOME/Documents")
+[ -n "$documents" ] || documents="$HOME/Documents"
+mkdir -p "$documents/OpenEletric/Exemplos"
+for example in "$install_dir"/exemplos/*.circuito; do
+ [ -f "$example" ] || continue
+ target="$documents/OpenEletric/Exemplos/$(basename "$example")"
+ # Examples are copied once; projects edited by the user are never replaced.
+ if [ ! -e "$target" ]; then cp "$example" "$target"; fi
+done
+CIRCUITO_PROJECTS_DIR=$("$wine64" winepath.exe -w "$documents/OpenEletric" 2>>"$log") || error "Não foi possível preparar a pasta de projetos. Registro: $log"
+export CIRCUITO_PROJECTS_DIR
+if [ "$#" -eq 1 ]; then
+ [ -f "$1" ] || error "Projeto não encontrado: $1"
+ project_win=$("$wine64" winepath.exe -w "$1" 2>>"$log") || error 'Não foi possível localizar o projeto.'
+ set -- "$project_win"
+fi
+cd "$documents/OpenEletric"
+if "$wine64" "$install_dir/OpenEletric.exe" "$@" >>"$log" 2>&1; then exit 0; fi
+error "O aplicativo não pôde continuar. Registro: $log"

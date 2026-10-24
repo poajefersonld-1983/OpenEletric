@@ -1,0 +1,140 @@
+[
+  {
+    "Id": "PDFsharp-GDI",
+    "Version": "6.2.4",
+    "Assemblies": [
+      {
+        "Hash": "B0649EC5088C165FDB14B1AE1B013881F978C415CC752C52E3692A7560BB8AD6",
+        "File": "pdfsharp-gdi/PdfSharp-gdi.dll"
+      },
+      {
+        "Hash": "361B75AE4DA87CD63F4B451BBC2239770D9175D9CFAA466C41A6FB495991F221",
+        "File": "pdfsharp-gdi/PdfSharp.System.dll"
+      },
+      {
+        "Hash": "AD30AF67D13F532372A350CD83B1C64D04FD8AAD64C4695CAAF2E4322609F235",
+        "File": "pdfsharp-gdi/PdfSharp.Shared.dll"
+      }
+    ],
+    "PackageHash": "E7F5B705598F6F23FCEA34789EEF495F4333AAD1C37A96EDD0D369E09EB213DF",
+    "Framework": "net462",
+    "License": "MIT"
+  },
+  {
+    "Id": "Microsoft.Extensions.Logging.Abstractions",
+    "Version": "8.0.3",
+    "Assemblies": [
+      {
+        "Hash": "B4E0E778AFDC76403792390B056F68DE0CED742D16C5B0347D9CCA6930F4761B",
+        "File": "microsoft.extensions.logging.abstractions/Microsoft.Extensions.Logging.Abstractions.dll"
+      }
+    ],
+    "PackageHash": "E4C498D5A13051B4577A148F1D8C3470167215C507E2392069B75DC61322BB74",
+    "Framework": "net462",
+    "License": "MIT"
+  },
+  {
+    "Id": "System.Security.Cryptography.Pkcs",
+    "Version": "8.0.1",
+    "Assemblies": [
+      {
+        "Hash": "89436836E39A6BB4275613CE45226FFA10E590151296343560221441D7A79670",
+        "File": "system.security.cryptography.pkcs/System.Security.Cryptography.Pkcs.dll"
+      }
+    ],
+    "PackageHash": "28C348909DF243FE4EE962213E3C8021AAECBC8321929DBA03A69BCB92A49DE5",
+    "Framework": "net462",
+    "License": "MIT"
+  },
+  {
+    "Id": "Microsoft.Extensions.DependencyInjection.Abstractions",
+    "Version": "8.0.2",
+    "Assemblies": [
+      {
+        "Hash": "19EDD4F5E69A4589DC314909B5854A22F89C4B9AB040591771397B2CB1A17BA6",
+        "File": "microsoft.extensions.dependencyinjection.abstractions/Microsoft.Extensions.DependencyInjection.Abstractions.dll"
+      }
+    ],
+    "PackageHash": "51F2DF1100245F10DA54F0BB7E813F277155117777D4FBBAB902214E27372606",
+    "Framework": "net462",
+    "License": "MIT"
+  },
+  {
+    "Id": "System.Buffers",
+    "Version": "4.5.1",
+    "Assemblies": [
+      {
+        "Hash": "ACCCCFBE45D9F08FFEED9916E37B33E98C65BE012CFFF6E7FA7B67210CE1FEFB",
+        "File": "system.buffers/System.Buffers.dll"
+      }
+    ],
+    "PackageHash": "C30B3DD2C7E2F4CEE4B823D692FD42118309B42AB1F5007F923D329A5B0D6B12",
+    "Framework": "net461",
+    "License": ""
+  },
+  {
+    "Id": "System.Memory",
+    "Version": "4.5.5",
+    "Assemblies": [
+      {
+        "Hash": "BF3FB84664F4097F1A8A9BC71A51DCF8CF1A905D4080A4D290DA1730866E856F",
+        "File": "system.memory/System.Memory.dll"
+      }
+    ],
+    "PackageHash": "10F43DA352A29FB2B3188E4EDD4DCF5100194C8B526E4F61FE2E2B5623775A22",
+    "Framework": "net461",
+    "License": ""
+  },
+  {
+    "Id": "Microsoft.Bcl.AsyncInterfaces",
+    "Version": "8.0.0",
+    "Assemblies": [
+      {
+        "Hash": "80678203BD0203A6594F4E330B22543C0DE5059382BB1C9334B7868B8F31B1BC",
+        "File": "microsoft.bcl.asyncinterfaces/Microsoft.Bcl.AsyncInterfaces.dll"
+      }
+    ],
+    "PackageHash": "F5A5A68B03092AB2ABF68843D4A4AEA25DFBCBE8DD0F13C625CB779B6FC1927C",
+    "Framework": "net462",
+    "License": "MIT"
+  },
+  {
+    "Id": "System.Threading.Tasks.Extensions",
+    "Version": "4.5.4",
+    "Assemblies": [
+      {
+        "Hash": "4F81FFD0DC7204DB75AFC35EA4291769B07C440592F28894260EEA76626A23C6",
+        "File": "system.threading.tasks.extensions/System.Threading.Tasks.Extensions.dll"
+      }
+    ],
+    "PackageHash": "A304A963CC0796C5179F9C6B7D8022BBCE3B2FA7C029EB6196F631F7B462D678",
+    "Framework": "net461",
+    "License": ""
+  },
+  {
+    "Id": "System.Numerics.Vectors",
+    "Version": "4.5.0",
+    "Assemblies": [
+      {
+        "Hash": "1D3EF8698281E7CF7371D1554AFEF5872B39F96C26DA772210A33DA041BA1183",
+        "File": "system.numerics.vectors/System.Numerics.Vectors.dll"
+      }
+    ],
+    "PackageHash": "A9D49320581FDA1B4F4BE6212C68C01A22CDF228026099C20A8EABEFCF90F9CF",
+    "Framework": "net46",
+    "License": ""
+  },
+  {
+    "Id": "System.Runtime.CompilerServices.Unsafe",
+    "Version": "4.5.3",
+    "Assemblies": [
+      {
+        "Hash": "66409F670315AFE8610F17A4D3A1EE52D72B6A46C544CEC97544E8385F90AD74",
+        "File": "system.runtime.compilerservices.unsafe/System.Runtime.CompilerServices.Unsafe.dll"
+      }
+    ],
+    "PackageHash": "96764C52A44EE1161151E48EF07489F72047A851CB55B99E9F01D6908536D1A9",
+    "Framework": "net461",
+    "License": ""
+  }
+]

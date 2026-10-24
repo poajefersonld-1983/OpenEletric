@@ -1,0 +1,10 @@
+{
+  "tool": "ezdxf",
+  "version": "1.4.5",
+  "fixtures": [
+    "externo-R12.dxf",
+    "externo-R2010.dxf",
+    "externo-entidades-adicionais.dxf"
+  ],
+  "purpose": "Fixtures generated without application C# writer; coordinates, Unicode, rotation and unsupported entities"
+}
