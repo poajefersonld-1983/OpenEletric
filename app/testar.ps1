@@ -6,7 +6,7 @@ $sources = $names | ForEach-Object { Join-Path $PSScriptRoot ($_ + '.cs') }
 $output = Join-Path $PSScriptRoot 'verificacao'
 New-Item -ItemType Directory -Path $output -Force | Out-Null
 # Independent input fixtures, copied without requiring previous generated outputs.
-foreach ($folder in @('referencias-involucros','referencias-dxf','referencias-amb','referencias-temporais')) {
+foreach ($folder in @('referencias-involucros','referencias-dxf','referencias-amb','referencias-temporais','referencias-barras')) {
     $source = Join-Path $PSScriptRoot ('amostras-testes\' + $folder)
     if (Test-Path -LiteralPath $source) { Copy-Item -LiteralPath $source -Destination $output -Recurse -Force }
 }
