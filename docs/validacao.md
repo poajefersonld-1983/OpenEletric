@@ -4,7 +4,7 @@
 
 A matriz de desenvolvimento contém **40 funções verificadas dentro de critérios delimitados**. O texto dos critérios está preservado em [MATRIZ-FUNCOES.csv](../analise/MATRIZ-FUNCOES.csv). Isso não significa que toda entrada possível foi provada, que o programa é certificado ou que há equivalência integral a outro software.
 
-A base anterior de desenvolvimento teve 53 suítes automatizadas, conferências independentes e testes de recuperação com autosave real e término abrupto. O OpenEletric acrescentou testes de integração com o desktop e a execução no [GitHub Actions para Windows](https://github.com/poajefersonld-1983/OpenEletric/actions/workflows/validacao.yml). O resultado de cada execução está no workflow; um teste em Wine não deve ser apresentado como teste Windows nativo.
+A base anterior de desenvolvimento teve 53 suítes automatizadas, conferências independentes e testes de recuperação com autosave real e término abrupto. O OpenEletric acrescentou testes de integração com o desktop e a execução no [GitHub Actions para Windows](https://github.com/poajefersonld-1983/OpenEletric/actions/workflows/validacao.yml). **As 54 suítes passaram em Windows nativo** na [execução 40120436022](https://github.com/poajefersonld-1983/OpenEletric/actions/runs/40120436022), incluindo compilação x64, PDF, recuperação de falha, dez cenários industriais e integração com o desktop. O pacote Debian 13 amd64 foi instalado em ambiente isolado: abertura de projeto Unicode, preservação de arquivos e exemplos, e remoção preservando projetos/perfil foram verificadas. A edição Debian usa Wine64; não é uma reescrita nativa da interface.
 
 ## Dez cenários industriais
 

@@ -4,7 +4,7 @@ A edição é destinada ao **Debian 13 amd64**. Usa o aplicativo WinForms em Win
 
 ## Instalação
 
-1. Baixe `openeletric_0.2.0-1_amd64.deb` na [última versão](https://github.com/poajefersonld-1983/OpenEletric/releases/latest).
+1. [Baixe o instalador Debian](https://github.com/poajefersonld-1983/OpenEletric/releases/latest/download/openeletric_0.2.0-1_amd64.deb). Ele será salvo na pasta **Downloads**.
 2. Na pasta do download, execute:
 
 ```bash

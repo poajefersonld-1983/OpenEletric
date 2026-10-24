@@ -10,7 +10,7 @@
 
 O OpenEletric reúne editor unifilar, dados de cargas e motores, estudos de cabos e proteções, fluxo por fase e relatórios. Você pode começar pelos **dez exemplos industriais** incluídos e acompanhar como cada entrada altera os resultados.
 
-<p align="center"><a href="https://github.com/poajefersonld-1983/OpenEletric/releases/latest/download/OpenEletric-Windows-x64.zip"><strong>⬇ Baixar para Windows</strong></a> · <a href="https://github.com/poajefersonld-1983/OpenEletric/releases/latest"><strong>⬇ Downloads e versão Debian</strong></a> · <a href="docs/primeiros-passos.md"><strong>Guia com imagens</strong></a></p>
+<p align="center"><a href="https://github.com/poajefersonld-1983/OpenEletric/releases/latest/download/OpenEletric-Windows-x64.zip"><strong>⬇ Baixar para Windows</strong></a> · <a href="https://github.com/poajefersonld-1983/OpenEletric/releases/latest/download/openeletric_0.2.0-1_amd64.deb"><strong>⬇ Baixar para Debian</strong></a> · <a href="docs/primeiros-passos.md"><strong>Guia com imagens</strong></a></p>
 
 > Ferramenta de apoio a estudos. Resultados dependem dos dados e dos modelos declarados; não representam certificação normativa ou aprovação de fabricante. As limitações aparecem nos relatórios e em [escopo e validação](docs/validacao.md).
 
