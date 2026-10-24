@@ -1,0 +1,101 @@
+{
+  "reference": "STAMFORD S7L1D-K4 Wdg312 ES10459201 RevB09.09.2025 p6, symmetric red50Hz curve, star separately excited no-load,380V factor1.00, no scaling",
+  "url": "https://www.stamford-avk.com/sites/stamfordavk/files/ES10459201_S7L1D-K4-B-W312.pdf",
+  "sha256_pdf": "76340036ddb3aa44c41891296929c8f9a4d1df41d5e2b70e8670bbec254f3a28",
+  "kind": "symmetric AC RMS envelope, not instantaneous/asymmetric peak",
+  "digitization": "12 approximate visual-axis/color samples, rounded100A, conservative3percent reading tolerance; not digital OEM data; interpolation between points is model approximation",
+  "axes_pixels": {
+    "x": [
+      145,
+      1680
+    ],
+    "time_s": [
+      0.001,
+      10
+    ],
+    "y": [
+      20,
+      442
+    ],
+    "current_A": [
+      100000,
+      1000
+    ]
+  },
+  "points": [
+    {
+      "time_s": 0.001,
+      "image_x": 145,
+      "median_red_y": 119,
+      "approx_current_A": 33900
+    },
+    {
+      "time_s": 0.003,
+      "image_x": 328,
+      "median_red_y": 128,
+      "approx_current_A": 30800
+    },
+    {
+      "time_s": 0.01,
+      "image_x": 529,
+      "median_red_y": 138,
+      "approx_current_A": 27600
+    },
+    {
+      "time_s": 0.03,
+      "image_x": 712,
+      "median_red_y": 157,
+      "approx_current_A": 22400
+    },
+    {
+      "time_s": 0.1,
+      "image_x": 912,
+      "median_red_y": 187,
+      "approx_current_A": 16200
+    },
+    {
+      "time_s": 0.2,
+      "image_x": 1028,
+      "median_red_y": 223,
+      "approx_current_A": 10900
+    },
+    {
+      "time_s": 0.4,
+      "image_x": 1144,
+      "median_red_y": 251,
+      "approx_current_A": 8000
+    },
+    {
+      "time_s": 0.7,
+      "image_x": 1237,
+      "median_red_y": 224,
+      "approx_current_A": 10800
+    },
+    {
+      "time_s": 1.0,
+      "image_x": 1296,
+      "median_red_y": 210,
+      "approx_current_A": 12600
+    },
+    {
+      "time_s": 2.0,
+      "image_x": 1412,
+      "median_red_y": 212,
+      "approx_current_A": 12300
+    },
+    {
+      "time_s": 5.0,
+      "image_x": 1564,
+      "median_red_y": 212,
+      "approx_current_A": 12300
+    },
+    {
+      "time_s": 10.0,
+      "image_x": 1680,
+      "median_red_y": 212,
+      "approx_current_A": 12300
+    }
+  ],
+  "annotation_sustained_A": 12250,
+  "limits": "Conditions and max10s as p6; do not infer machine sustained current fromXd or apply sqrt2 to obtain asymmetric peak"
+}

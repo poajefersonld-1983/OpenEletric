@@ -1,0 +1,21 @@
+import * as XLSX from './xlsx.mjs';
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../../app/amostras-testes/xls');
+fs.mkdirSync(root,{recursive:true});
+const equipmentHeader='Manufacturer;Reference;Description;Category;RatedA;BreakingKA;TripI2A;LetThroughA2s;MagneticA;RcdMilliA;Source'.split(';');
+const cableHeader='Name;Material;Insulation;Installation;SectionMm2;IzA;ResistanceOhmKm;ReactanceOhmKm;Reference'.split(';');
+const equipment=['Fábrica ç','REF001','Descrição\nlinha','Disjuntor',12.5,10,18.1,12000,100,30,'Ensaio sintético'];
+function write(name,rows,transform){const wb=XLSX.utils.book_new();const sheet=XLSX.utils.aoa_to_sheet(rows);if(transform)transform(sheet,wb);XLSX.utils.book_append_sheet(wb,sheet,'Dados');fs.writeFileSync(path.join(root,name+'.xls'),XLSX.write(wb,{bookType:'biff8',type:'buffer',bookSST:true}));}
+write('equipamentos',[equipmentHeader,equipment]);
+write('cabos',[cableHeader,['Cabo Ω','Cu','XLPE','B1',10,57,1.83,.08,'Ensaio sintético']]);
+write('duplicados',[equipmentHeader,equipment,equipment]);
+const invalid=[...equipment];invalid[4]='NaN';write('numero-invalido',[equipmentHeader,invalid]);
+write('erro-celula',[equipmentHeader,equipment],sheet=>{sheet.E2={t:'e',v:7};});
+write('cabecalho-invalido',[['Cabeçalho errado'],['Dados']]);
+const empty=[...equipment];empty[10]='';write('fonte-vazia',[equipmentHeader,empty]);
+write('modelo-vazio',[equipmentHeader]);
+write('texto-longo',[equipmentHeader,equipment],sheet=>{sheet.C2={t:'s',v:'x'.repeat(2001)};});
+write('colunas-excedentes',[Array.from({length:65},(_,i)=>'Coluna '+i)]);
+console.log('Amostras BIFF8 sintéticas geradas em '+root);
